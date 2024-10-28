@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name:
+
+  liquibase:
+    change-log: classpath:liquibase/db.changelog.yaml
+    enabled: true
+    default-schema: bookstore
