@@ -25,7 +25,7 @@ CREATE TABLE authors
 (
     id        SERIAL PRIMARY KEY,
     name      VARCHAR(255) NOT NULL,
-    biography TEXT,
+    biography VARCHAR(1000),
     birthdate DATE
 );
 
@@ -34,7 +34,7 @@ CREATE TABLE books
     id               SERIAL PRIMARY KEY,
     isbn             VARCHAR(20)    NOT NULL,
     title            VARCHAR(255)   NOT NULL,
-    description      TEXT,
+    description      VARCHAR(1000),
     author_id        BIGINT         REFERENCES authors (id) ON DELETE SET NULL,
     price            DECIMAL(10, 2) NOT NULL,
     publication_date DATE
